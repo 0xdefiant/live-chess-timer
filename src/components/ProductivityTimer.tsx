@@ -12,17 +12,17 @@ function ProductivityTimer() {
 
     const [isRunning, setIsRunning] = useState(false);
 
-    const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+    const intervalRef = useRef<number | null>(null);
 
     useEffect(() => {
         if(isRunning) {
-            intervalRef.current = setInterval(() => {
+            intervalRef.current = window.setInterval(() => {
                 if(isUserTimeActive) {
                     setUserTimeElapsed((previousTime) => previousTime + 1);
                 } else {
                     setTimeOffElapsed((previousTime) => previousTime + 1);
                 }
-            }, 1000);
+            }, 1000) as unknown as number;
         } else {
             if(intervalRef.current) {
                 clearInterval(intervalRef.current);
