@@ -80,10 +80,6 @@ This project uses modern development practices:
 
 Feel free to submit issues and enhancement requests!
 
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
 ---
 
 *Built with ❤️ using React, TypeScript, and modern web technologies*
